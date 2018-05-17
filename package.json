@@ -27,6 +27,8 @@
     "webpack-merge": "^4.1.2"
   },
   "scripts": {
-    "api": "babel-node server.js"
+    "api": "babel-node server.js",
+    "start": "NODE_ENV=development & webpack-dev-server",
+    "build": "NODE_ENV=build & webpack"
   }
 }
