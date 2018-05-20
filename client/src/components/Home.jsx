@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router';
 
 export default class Home extends PureComponent {
-  active(path) {
+  active (path) {
+    // Returns active when the path is equal to the current location
     if (this.props.location.pathname === path) {
       return 'active';
     }
@@ -18,10 +19,9 @@ export default class Home extends PureComponent {
                   <nav>
                     <img className="header-logo" src="https://cdn.filestackcontent.com/nLnmrZQaRpeythR4ezUo"/>
                     <ul className="nav masthead-nav">
-                      <li className={this.active('/')}><Link to="/"></Link></li>
-                      <li className={this.active('/about')}><Link to="/about"></Link></li>
-                      <li className={this.active('/contact')}><Link to="/contact"></Link></li>
-                      <li className={this.active('/new_element_property')}><Link to='/new_element'></Link></li>
+                      <li className={this.active('/')}><Link to="/">Home</Link></li>
+                      <li className={this.active('/about')}><Link to="/about">About</Link></li>
+                      <li className={this.active('/contact')}><Link to="/contact">Contact</Link></li>
                     </ul>
                   </nav>
                 </div>
